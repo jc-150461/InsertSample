@@ -12,9 +12,12 @@ namespace SQLite11
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SelectPage : ContentPage
 	{
-		public SelectPage ()
-		{
-			InitializeComponent ();
+        public SelectPage()
+        {
+            InitializeComponent();
+        }
+        void SelectClicked(object sender, EventArgs e)
+        {
             //Userテーブルの行データを取得
             var query = UserModel.selectUser(); //中身はSELECT * FROM [User]
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
