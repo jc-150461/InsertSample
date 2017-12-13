@@ -10,7 +10,7 @@
           
 
 
-            <ListView x:Name="Text"
+            <ListView x:Name="ListView"
                       SeparatorColor="Black"/>
 
         </StackLayout>
