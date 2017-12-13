@@ -9,6 +9,9 @@
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+
+            <ListView x:Name="listView"
+                      SeparatorColor="Black"/> <!--listView追加-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
