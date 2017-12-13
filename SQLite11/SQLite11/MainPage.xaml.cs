@@ -16,11 +16,12 @@ namespace SQLite11
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
 
             //Userテーブルに適当なデータを追加
+            /*
             UserModel.insertUser("鈴木");
             UserModel.insertUser("田中");
             UserModel.insertUser("斎藤");
             //↑この辺をボタンに突っ込む
-
+            */
             //Userテーブルの行データを取得
             var query = UserModel.selectUser();
 
