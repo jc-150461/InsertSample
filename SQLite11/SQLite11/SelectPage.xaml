@@ -8,7 +8,9 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
-            
+
+            <ListView x:Name="ListView"
+                      SeparatorColor="Black"/>
 
         </StackLayout>
     </ContentPage.Content>
