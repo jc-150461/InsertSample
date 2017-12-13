@@ -24,9 +24,12 @@ namespace SQLite11
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
             foreach (var user in query)
             {
+
+                this.listView.ItemsSource =  user.Name ;
                 //Userテーブルの名前列をLabelに書き出す
-                layout.Children.Add(new Label { Text = user.Name });
+              //  layout.Children.Add(new Label { Text = user.Name });
             }
+
 
 
             Content = layout;

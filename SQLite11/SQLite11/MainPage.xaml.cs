@@ -96,12 +96,13 @@ namespace SQLite11
             {
                 UserModel.insertUser("筋トレ01");
                 UserModel.insertUser("筋トレ02");
+                UserModel.insertUser("筋トレ03");
 
             }
             /****/
-          
-
            
+
+
 
             Content = layout;
 
@@ -135,7 +136,7 @@ namespace SQLite11
             var query = UserModel.selectUser(); //中身はSELECT * FROM [User]
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
 
-            this.listView.ItemsSource = query ;
+            
             foreach (var user in query)
             {
                 //Userテーブルの名前列をLabelに書き出す
