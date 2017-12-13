@@ -91,6 +91,13 @@ namespace SQLite11
             layout.Children.Add(Select);
             Select.Clicked += SelectClicked;
 
+            /****/
+            if(UserModel.selectUser() == null)
+            {
+                UserModel.insertUser("筋トレ01");
+                UserModel.insertUser("筋トレ02");
+            }
+            /****/
             Content = layout;
         }
 
