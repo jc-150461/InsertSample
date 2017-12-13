@@ -8,11 +8,11 @@ namespace SQLite11
     public partial class MainPage : ContentPage
     {
         //http://www.atmarkit.co.jp/ait/articles/1612/28/news021.html　ScrollView
-        
+
         public MainPage()
         {
             InitializeComponent();
-            　
+
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
 
             //Userテーブルに適当なデータを追加
@@ -33,7 +33,7 @@ namespace SQLite11
             Content = layout;
 
         }
-        
+
         /**********************************************************
 
         private Entry insertEntry; //insertの入力フィールド
@@ -197,7 +197,6 @@ namespace SQLite11
                     }
                 };
                 Content = scrollView;*/
-        }
-       
     }
 }
+
