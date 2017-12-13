@@ -141,7 +141,7 @@ namespace SQLite11
             {
                 //Userテーブルの名前列をLabelに書き出す
                 this.ListView.ItemsSource = user.Name;
-                layout.Children.Add(new Label { Text = user.Name });
+               // layout.Children.Add(new Label { Text = user.Name });
             }
             //selectする
             var Select = new Button
