@@ -4,12 +4,13 @@
              x:Class="SQLite11.SelectPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+           <!--- <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" /> 
+            ---->
 
 
-            <ListView x:Name="ListView"
+            <ListView x:Name="Text"
                       SeparatorColor="Black"/>
 
         </StackLayout>
