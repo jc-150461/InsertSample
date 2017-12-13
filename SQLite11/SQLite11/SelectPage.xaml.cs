@@ -25,9 +25,9 @@ namespace SQLite11
             foreach (var user in query)
             {
 
-                this.listView.ItemsSource =  user.Name ;
+                
                 //Userテーブルの名前列をLabelに書き出す
-              //  layout.Children.Add(new Label { Text = user.Name });
+                layout.Children.Add(new Label { Text = user.Name });
             }
 
 

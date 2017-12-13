@@ -140,6 +140,7 @@ namespace SQLite11
             foreach (var user in query)
             {
                 //Userテーブルの名前列をLabelに書き出す
+                this.ListView.ItemsSource = user.Name;
                 layout.Children.Add(new Label { Text = user.Name });
             }
             //selectする
@@ -152,9 +153,10 @@ namespace SQLite11
             };
             layout.Children.Add(Select);
             Select.Clicked += SelectClicked;
-           
             
-            
+
+
+
             //insertする
             var Insert = new Button
             {
