@@ -30,7 +30,7 @@ namespace SQLite11
             //Userテーブルの行データを取得
 
 
-
+            /******************************************追加********************************************************/
             var ar = new ObservableCollection<UserModel>();
 
             var listView = new ListView
@@ -38,8 +38,48 @@ namespace SQLite11
                 //ItemsSource = UserModel.selectUser(),
                 //ItemTemplate = new DataTemplate(typeof(TextCell))
                 ItemsSource = ar,
+                ItemTemplate = new DataTemplate(() => new Cell(this)),
             };
-            var query = UserModel.selectUser();
+
+            if (UserModel.selectUser() != null)
+            {
+                ar = new ObservableCollection<UserModel>(UserModel.selectUser());
+            }
+
+
+    class Cell : ViewCell
+    {
+        public Cell(MainPage myPage)
+        {
+            var label = new Label
+            {
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+            };
+            //label.SetBinding(Label.TextProperty, new Binding("."));
+
+            var actionDelete = new MenuItem
+            {
+                Text = "Delete",
+                Command = new Command(p => myPage.DisplayAlert("Delete", p.ToString(), "OK")),
+                IsDestructive = true,
+            };
+                /*
+            actionDelete.SetBinding(MenuItem.CommandParameterProperty, new Binding("."));
+            actionDelete.Clicked += (s, a) => myPage.((MenuItem)s);
+            ContextActions.Add(actionDelete);
+            */
+
+            View = new StackLayout
+            {
+                Padding = 10,
+                Children = { label }
+            };
+        }
+    }
+
+    /******************************************ここまで追加********************************************************/
+
+    var query = UserModel.selectUser();
 
             foreach (var user in query)
             {
