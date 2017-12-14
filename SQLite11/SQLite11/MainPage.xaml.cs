@@ -57,6 +57,7 @@ namespace SQLite11
             {
                 ar = new ObservableCollection<UserModel>(UserModel.selectUser());
             }
+        }
 
 
     class Cell : ViewCell
