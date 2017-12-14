@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+
 using Xamarin.Forms;
 
 //参考url http://dev-suesan.hatenablog.com/entry/2017/03/06/005206
@@ -23,6 +28,17 @@ namespace SQLite11
             //↑この辺をボタンに突っ込む
             */
             //Userテーブルの行データを取得
+
+
+
+            var ar = new ObservableCollection<UserModel>();
+
+            var listView = new ListView
+            {
+                //ItemsSource = UserModel.selectUser(),
+                //ItemTemplate = new DataTemplate(typeof(TextCell))
+                ItemsSource = ar,
+            };
             var query = UserModel.selectUser();
 
             foreach (var user in query)
