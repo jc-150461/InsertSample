@@ -13,11 +13,13 @@ namespace SQLite11
     public partial class MainPage : ContentPage
     {
         //http://www.atmarkit.co.jp/ait/articles/1612/28/news021.html　ScrollView
-
+        
         public MainPage()
         {
+
             InitializeComponent();
 
+            /**************************************
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
 
             //Userテーブルに適当なデータを追加
@@ -28,7 +30,7 @@ namespace SQLite11
             //↑この辺をボタンに突っ込む
             */
             //Userテーブルの行データを取得
-
+            /***************************
             var query = UserModel.selectUser();
 
             foreach (var user in query)
@@ -42,7 +44,7 @@ namespace SQLite11
 
 
 
-            /******************************************追加********************************************************/
+            /******************************************追加********************************************************
             var ar = new ObservableCollection<UserModel>();
 
             var listView = new ListView
@@ -80,8 +82,9 @@ namespace SQLite11
             actionDelete.SetBinding(MenuItem.CommandParameterProperty, new Binding("."));
             actionDelete.Clicked += (s, a) => myPage.((MenuItem)s);
             ContextActions.Add(actionDelete);
+            */
 
-
+            /******************************************
             View = new StackLayout
             {
                 Padding = 10,
@@ -259,6 +262,4 @@ namespace SQLite11
                         Content = scrollView;*/
             }
         }
-    }
 }
-
