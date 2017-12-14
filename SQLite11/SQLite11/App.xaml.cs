@@ -16,7 +16,7 @@ namespace SQLite11
 
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new ListViewPage());
         }
 
         protected override void OnStart()
